@@ -1,0 +1,10 @@
+class Solution {
+    func reverseWords(_ s: String) -> String {
+        var words = s.split(separator: " ").map { String($0) }
+        for i in 0..<words.count {
+            words[i] = String(words[i].reversed())
+        }
+        let res = words.joined(separator: " ")
+        return res
+    }
+}
